@@ -12,6 +12,9 @@ package actividadmod1.Exception;
 public class ExcepcionDocument extends Exception {
     
     private String typeDocument;
+
+    public ExcepcionDocument() {
+    }
     
     public ExcepcionDocument(String message) {
        super();
@@ -20,6 +23,9 @@ public class ExcepcionDocument extends Exception {
     
    @Override
    public String getMessage(){
+       if (typeDocument==null){
+       return "El dni ya existe";
+       }
        return "Tipo de documento: "+typeDocument+" no es admitido";
    }
     

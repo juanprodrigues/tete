@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="actividadMod1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/actividadMod1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

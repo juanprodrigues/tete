@@ -10,5 +10,10 @@ package actividadmod1.model;
  * @author JuanPC
  */
 public class Administrative extends Employee{
+
+    @Override
+    public String toString() {
+        return "Administrative{" +super.toString()+ '}';
+    }
     
 }

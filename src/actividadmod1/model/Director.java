@@ -17,10 +17,11 @@ public class Director extends Employee{
     public Director() {
     }
 
-    public Director(String career, LocalDate datePosition, Double sueldo, String name, String lastName, Document document, int age) {
-        super(datePosition, sueldo, name, lastName, document, age);
+    public Director(String career, LocalDate datePosition, Double sueldo, String name, String lastName, Document document, LocalDate dateOfBirth) {
+        super(datePosition, sueldo, name, lastName, document, dateOfBirth);
         this.career = career;
     }
+
 
     public String getCareer() {
         return career;
@@ -32,7 +33,7 @@ public class Director extends Employee{
 
     @Override
     public String toString() {
-        return super.toString()+ "Director{" + "career=" + career + '}';
+        return "Director{" + "career=" + career + '}'+ super.toString();
     }
     
 }

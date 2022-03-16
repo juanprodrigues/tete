@@ -19,8 +19,8 @@ public class Teacher extends Employee {
     public Teacher() {
     }
 
-    public Teacher(List<String> listCourses, LocalDate datePosition, Double sueldo, String name, String lastName, Document document, int age) {
-        super(datePosition, sueldo, name, lastName, document, age);
+    public Teacher(List<String> listCourses, LocalDate datePosition, Double sueldo, String name, String lastName, Document document, LocalDate dateOfBirth) {
+        super(datePosition, sueldo, name, lastName, document, dateOfBirth);
         this.listCourses = listCourses;
     }
 
@@ -34,7 +34,7 @@ public class Teacher extends Employee {
 
     @Override
     public String toString() {
-        return super.toString() + "Teacher{" + "listCourses=" + listCourses + '}';
+        return "Teacher{" + "listCourses=" + listCourses + '}' + super.toString();
     }
 
 }

@@ -12,15 +12,16 @@ import java.time.LocalDate;
  * @author JuanPC
  */
 public class Employee extends Person {
+
     private LocalDate datePosition;
- 
+
     private Double sueldo;
 
     public Employee() {
     }
 
-    public Employee(LocalDate datePosition, Double sueldo, String name, String lastName, Document document, int age) {
-        super(name, lastName, document, age);
+    public Employee(LocalDate datePosition, Double sueldo, String name, String lastName, Document document, LocalDate dateOfBirth) {
+        super(name, lastName, document, dateOfBirth);
         this.datePosition = datePosition;
         this.sueldo = sueldo;
     }
@@ -43,7 +44,7 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return super.toString()+ "Employee{" + "datePosition=" + datePosition + ", sueldo=" + sueldo + '}';
+        return "Employee{" + "datePosition=" + datePosition + ", sueldo=" + sueldo + '}' + super.toString();
     }
-    
+
 }

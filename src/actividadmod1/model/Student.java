@@ -5,6 +5,7 @@
  */
 package actividadmod1.model;
 
+import java.time.LocalDate;
 import java.util.*;
 
 
@@ -14,25 +15,17 @@ import java.util.*;
  */
 public class Student extends Person{
     
-    private int id;
     private List<String> courses ;
 
     public Student() {
+        incrementarContador();
     }
 
-    public Student(int id, List<String> courses, String name, String lastName, Document document, int age) {
-        super(name, lastName, document, age);
-        this.id = id;
+    public Student(List<String> courses, String name, String lastName, Document document, LocalDate dateOfBirth) {
+        super(name, lastName, document, dateOfBirth);
         this.courses = courses;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public List<String> getCourses() {
         return courses;
@@ -48,8 +41,10 @@ public class Student extends Person{
 
     @Override
     public String toString() {
-        return "Student{" + "id=" + id + ", courses=" + courses + '}'+" "+super.toString();
+        return "Student{" + "courses=" + courses + '}'+super.toString();
     }
+
+
     
     
 }

@@ -8,12 +8,12 @@ package actividadmod1.Service;
 import actividadmod1.Enum.TypeDocument;
 import actividadmod1.Exception.ExcepcionDocument;
 import actividadmod1.model.Document;
-import actividadmod1.model.Employee;
-import actividadmod1.model.Teacher;
-import static actividadmod1.util.Validation.validacionesTipoDNI;
-import java.time.DateTimeException;
+import actividadmod1.model.Person;
+import actividadmod1.util.Validation;
+
+import static actividadmod1.util.Validation.*;
 import java.time.LocalDate;
-import java.time.Month;
+
 import java.util.*;
 
 /**
@@ -22,68 +22,144 @@ import java.util.*;
  */
 public class EmployeeService {
 
+    protected String name;
+
+    protected String lastName;
+
+    protected String typeDocumet;
+
+    protected Long numberDocumet;
+
+    protected int age;
+
+    protected TypeDocument enumDocument;
+
+    //student
+    protected List<String> listCourses = new ArrayList<>();
+
+    protected String courses;
+
+    //teacher
+    protected Double sueldo;
+
+    protected LocalDate datePosition;
+
+    protected LocalDate dateOfBirth;
+
+    //director
+    protected String career;
+
     Scanner entrada = new Scanner(System.in).useDelimiter("\n");
 
-    public Teacher createEmployee() throws ExcepcionDocument {
-
-        List<String> listCourses = new ArrayList<>();
-        listCourses.add("Matemarica");
-        listCourses.add("Biologia");
-
-        //Employee employee = new Teacher();
-        System.out.println("Enter Salary: ");
-        Double salary = entrada.nextDouble();
+    public void createPerson() throws ExcepcionDocument {
 
         System.out.println("Enter name: ");
-        String name = entrada.next();
+        name = entrada.next();
         System.out.println("Enter Last Name: ");
-        String lastName = entrada.next();
+        lastName = entrada.next();
 
         Document document = new Document();
 
-        boolean exit = true;
-        do {
+        while (true) {
             try {
                 System.out.println("Enter Type of Document: ");
-                String typeDocumet = entrada.next();
-                TypeDocument enumDocument = validacionesTipoDNI(typeDocumet.toUpperCase());
-                document.setType(enumDocument);
-                exit = false;
+                typeDocumet = entrada.next();
+
+                enumDocument = validacionesTipoDNI(typeDocumet.toUpperCase());
+                
+                System.out.println("Enter Number Document: ");
+                numberDocumet = entrada.nextLong();
+                Validation.validacionInicoID(numberDocumet);
+                document.setNumber(numberDocumet);
+                break;
             } catch (ExcepcionDocument e) {
                 System.out.println(e.getMessage());
             }
 
-        } while (exit);
+        }
 
-        System.out.println("Enter Number Document: ");
-        Long numberDocumet = entrada.nextLong();
+        System.out.println("Information Date of Birday. ");
+        dateOfBirth = dateIngreso("Cumpleanos");
+    }
 
-        document.setNumber(numberDocumet);
+    public void createStudent() throws ExcepcionDocument {
 
-        System.out.println("Enter age: ");
-        int age = entrada.nextInt();
+        createPerson();
 
-        LocalDate dayINgreso = null;
+        System.out.println("Information de ingreso: ");
+        datePosition = dateIngreso("ingreso");
 
-        do {
-            try {
-                System.out.println("Enter age de ingreso: ");
-                int ageEnter = entrada.nextInt();
+        //muestra si es mayor de edad
+        System.out.println(higherAge(age));
+        //incrementa el contador
 
-                System.out.println("Enter day de ingreso: ");
-                int dayEnter = entrada.nextInt();
-                System.out.println("Enter month de ingreso: ");
-                int monthEnter = entrada.nextInt();
-                dayINgreso = LocalDate.of(ageEnter, Month.of(monthEnter), dayEnter);
-            } catch (DateTimeException e) {
-                System.out.println("Error al ingresar la feche.");
-                System.out.println("Detalles: " + e.getMessage());
-            }
-        } while (dayINgreso == null);
 
-        return new Teacher(listCourses, dayINgreso, salary, name, lastName, document, age);
+        //addCourse(listCourses1);
+        //listCourses.clear();
+    }
+
+    public void createTeacher() throws ExcepcionDocument {
+        List<String> listCourses2 = new ArrayList<>();
+        createPerson();
+
+        //addCourse(listCourses2);
+        SueldoAndDateIngreso();
 
     }
 
+    public void createDirector() throws ExcepcionDocument {
+
+        createPerson();
+
+        System.out.println("Ingrese Carrera: ");
+        career = entrada.next();
+
+    }
+
+    public void createAdministrativo() throws ExcepcionDocument {
+
+        createPerson();
+
+        SueldoAndDateIngreso();
+
+    }
+
+    public void SueldoAndDateIngreso() {
+
+        System.out.println("Ingrese sueldo: ");
+        sueldo = entrada.nextDouble();
+
+        System.out.println("Information de Fecha de Cargo: ");
+        datePosition = dateIngreso("Cargo");
+    }
+
+    public LocalDate dateIngreso(String type) {
+        return validacionFecha(type);
+    }
+
+    public List<String> addCourse(List<String> listC) {
+        while (true) {
+            System.out.println("Enter name asignature or q to exit: ");
+            courses = entrada.next();
+            if (courses.equals("q")) {
+                break;
+            }
+            listC.add(courses);
+        }
+        return listC;
+    }
+
+
+    public String higherAge(int age) {
+        if (age >= 18) {
+            return "If you are of age.";
+        } else {
+            return "He is not of age.";
+        }
+    }
+
+    private void validacionInicoID(List<Person> listPersons, Long numberDocumet1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

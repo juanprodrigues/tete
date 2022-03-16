@@ -7,6 +7,7 @@ package actividadmod1.Service;
 
 import actividadmod1.Enum.TypeDocument;
 import actividadmod1.Exception.ExcepcionDocument;
+import actividadmod1.model.Director;
 import actividadmod1.model.Document;
 import actividadmod1.model.Employee;
 import actividadmod1.model.Teacher;
@@ -20,70 +21,25 @@ import java.util.*;
  *
  * @author JuanPC
  */
-public class DirectorService {
+public class DirectorService extends EmployeeService {
 
-    Scanner entrada = new Scanner(System.in).useDelimiter("\n");
+    int idDirector = 1;
 
-    public Teacher createEmployee() throws ExcepcionDocument {
+    public Director create() throws ExcepcionDocument {
 
-        List<String> listCourses = new ArrayList<>();
-        listCourses.add("Matemarica");
-        listCourses.add("Biologia");
+        createDirector();
 
-        //Employee employee = new Teacher();
-        System.out.println("Enter Salary: ");
-        Double salary = entrada.nextDouble();
+        Director director = new Director();
 
-        System.out.println("Enter name: ");
-        String name = entrada.next();
-        System.out.println("Enter Last Name: ");
-        String lastName = entrada.next();
-
-        Document document = new Document();
-
-        boolean exit = true;
-        do {
-            try {
-                System.out.println("Enter Type of Document: ");
-                String typeDocumet = entrada.next();
-                TypeDocument enumDocument = validacionesTipoDNI(typeDocumet.toUpperCase());
-                document.setType(enumDocument);
-                exit = false;
-            } catch (ExcepcionDocument e) {
-                System.out.println(e.getMessage());
-            }
-
-        } while (exit);
-
-        System.out.println("Enter Number Document: ");
-        Long numberDocumet = entrada.nextLong();
-
-        document.setNumber(numberDocumet);
-
-        System.out.println("Enter age: ");
-        int age = entrada.nextInt();
-
-        LocalDate dayINgreso = null;
-
-        do {
-            try {
-                System.out.println("Enter age de ingreso: ");
-                int ageEnter = entrada.nextInt();
-
-                System.out.println("Enter day de ingreso: ");
-                int dayEnter = entrada.nextInt();
-                System.out.println("Enter month de ingreso: ");
-                int monthEnter = entrada.nextInt();
-                dayINgreso = LocalDate.of(ageEnter, Month.of(monthEnter), dayEnter);
-            } catch (DateTimeException e) {
-                System.out.println("Error al ingresar la feche.");
-                System.out.println("Detalles: " + e.getMessage());
-            }
-        } while (dayINgreso == null);
-
-        return new Teacher(listCourses, dayINgreso, salary, name, lastName, document, age);
+        director.setName(name);
+        director.setLastName(lastName);
+        director.setDocument(new Document(enumDocument, numberDocumet));
+        director.setAge(age);
+        director.setSueldo(sueldo);
+        director.setDatePosition(datePosition);
+        director.setCareer(career);
+        idDirector++;
+        return director;
 
     }
-
-
 }
