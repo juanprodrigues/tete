@@ -12,6 +12,7 @@ import actividadmod1.model.Person;
 import actividadmod1.util.Validation;
 
 import static actividadmod1.util.Validation.*;
+import java.text.ParseException;
 import java.time.LocalDate;
 
 import java.util.*;
@@ -32,14 +33,14 @@ public class EmployeeService {
 
     protected int age;
 
-    protected TypeDocument enumDocument;
+    protected String enumDocument;
 
     //student
     protected List<String> listCourses = new ArrayList<>();
 
     protected String courses;
 
-    //teacher
+    //teacher //administrative
     protected Double sueldo;
 
     protected LocalDate datePosition;
@@ -51,7 +52,7 @@ public class EmployeeService {
 
     Scanner entrada = new Scanner(System.in).useDelimiter("\n");
 
-    public void createPerson() throws ExcepcionDocument {
+    public void createPerson() throws ExcepcionDocument, ParseException {
 
         System.out.println("Enter name: ");
         name = entrada.next();
@@ -66,7 +67,7 @@ public class EmployeeService {
                 typeDocumet = entrada.next();
 
                 enumDocument = validacionesTipoDNI(typeDocumet.toUpperCase());
-                
+
                 System.out.println("Enter Number Document: ");
                 numberDocumet = entrada.nextLong();
                 Validation.validacionInicoID(numberDocumet);
@@ -82,7 +83,7 @@ public class EmployeeService {
         dateOfBirth = dateIngreso("Cumpleanos");
     }
 
-    public void createStudent() throws ExcepcionDocument {
+    public void createStudent() throws ExcepcionDocument, ParseException {
 
         createPerson();
 
@@ -93,12 +94,11 @@ public class EmployeeService {
         System.out.println(higherAge(age));
         //incrementa el contador
 
-
         //addCourse(listCourses1);
         //listCourses.clear();
     }
 
-    public void createTeacher() throws ExcepcionDocument {
+    public void createTeacher() throws ExcepcionDocument, ParseException {
         List<String> listCourses2 = new ArrayList<>();
         createPerson();
 
@@ -107,16 +107,16 @@ public class EmployeeService {
 
     }
 
-    public void createDirector() throws ExcepcionDocument {
+    public void createDirector() throws ExcepcionDocument, ParseException {
 
         createPerson();
-
+        SueldoAndDateIngreso();
         System.out.println("Ingrese Carrera: ");
         career = entrada.next();
 
     }
 
-    public void createAdministrativo() throws ExcepcionDocument {
+    public void createAdministrativo() throws ExcepcionDocument, ParseException {
 
         createPerson();
 
@@ -124,31 +124,53 @@ public class EmployeeService {
 
     }
 
-    public void SueldoAndDateIngreso() {
+    public void SueldoAndDateIngreso() throws ParseException {
+
+        System.out.println("Information de Fecha de Cargo: ");
+        datePosition = dateIngreso("Cargo");
 
         System.out.println("Ingrese sueldo: ");
         sueldo = entrada.nextDouble();
 
-        System.out.println("Information de Fecha de Cargo: ");
-        datePosition = dateIngreso("Cargo");
+
     }
 
-    public LocalDate dateIngreso(String type) {
-        return validacionFecha(type);
+    public LocalDate dateIngreso(String type) throws ParseException {
+        return validacionFechaString(type);
     }
 
-    public List<String> addCourse(List<String> listC) {
+    public HashMap<Integer, String> addCourse(HashMap<Integer, String> lisHashMap) {
+        Integer i = 0;
+
         while (true) {
             System.out.println("Enter name asignature or q to exit: ");
             courses = entrada.next();
+
             if (courses.equals("q")) {
                 break;
             }
-            listC.add(courses);
+            if (!searchCourse(lisHashMap, courses)) {
+                lisHashMap.put(i, courses);
+                i++;
+            }
+
         }
-        return listC;
+        return lisHashMap;
     }
 
+    public boolean searchCourse(HashMap<Integer, String> estudiantes, String nameCourse) {
+
+        // Recorrer las dos partes del mapa
+        for (Map.Entry<Integer, String> entry : estudiantes.entrySet()) {
+
+            if (entry.getValue().equals(nameCourse)) {
+                System.out.println("El nombre ya existe como curso.");
+                return true;
+            }
+
+        }
+        return false;
+    }
 
     public String higherAge(int age) {
         if (age >= 18) {
@@ -158,8 +180,5 @@ public class EmployeeService {
         }
     }
 
-    private void validacionInicoID(List<Person> listPersons, Long numberDocumet1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }

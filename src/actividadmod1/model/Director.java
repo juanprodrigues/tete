@@ -33,7 +33,7 @@ public class Director extends Employee{
 
     @Override
     public String toString() {
-        return "Director{" + "career=" + career + '}'+ super.toString();
+        return "Director{" + "career=" + career + '}'+" "+ super.toString();
     }
     
 }

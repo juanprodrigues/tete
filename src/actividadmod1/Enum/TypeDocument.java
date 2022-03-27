@@ -11,9 +11,22 @@ package actividadmod1.Enum;
  */
 public enum TypeDocument {
     
-    DNI,
-    CI,
-    LE,
-    PASS;
+    DNI("Documento Nacional de Identidad"),
+    CI("Cedula de Identidad"),
+    LE("Libreta de Enrolamiento"),
+    PASS("Pasaporte");
+    String msg;
+    //constructor
+    TypeDocument(String msg) {
+        this.msg = msg;
+    }
 
+    //instance methods
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
 }

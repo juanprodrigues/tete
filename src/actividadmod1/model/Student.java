@@ -13,35 +13,29 @@ import java.util.*;
  *
  * @author JuanPC
  */
-public class Student extends Person{
+public class Student extends Employee{
     
-    private List<String> courses ;
+    private HashMap<Integer, String> courses ;
 
     public Student() {
-        incrementarContador();
     }
 
-    public Student(List<String> courses, String name, String lastName, Document document, LocalDate dateOfBirth) {
-        super(name, lastName, document, dateOfBirth);
+    public Student(HashMap<Integer, String> courses, LocalDate datePosition, String name, String lastName, Document document, LocalDate dateOfBirth) {
+        super(datePosition, name, lastName, document, dateOfBirth);
         this.courses = courses;
     }
 
-
-    public List<String> getCourses() {
+    public HashMap<Integer, String> getCourses() {
         return courses;
     }
 
-    public void setCourses(List<String> courses) {
+    public void setCourses(HashMap<Integer, String> courses) {
         this.courses = courses;
-    }
-
-    public void addCourse(String course) {
-        this.courses.add(course);
     }
 
     @Override
     public String toString() {
-        return "Student{" + "courses=" + courses + '}'+super.toString();
+        return "Student{" + "courses=" + courses + '}'+" "+toStringStudent();
     }
 
 

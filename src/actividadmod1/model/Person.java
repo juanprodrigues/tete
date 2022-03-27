@@ -6,6 +6,7 @@
 package actividadmod1.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -13,7 +14,7 @@ import java.time.LocalDate;
  */
 public class Person {
 
-    private int id=0;
+    private int id = 0;
 
     private String name;
     private String lastName;
@@ -39,6 +40,7 @@ public class Person {
         this.age = age;
         this.dateOfBirth = dateOfBirth;
     }
+
     public int getId() {
         return id;
     }
@@ -97,9 +99,24 @@ public class Person {
 
     }
 
+    public String stringToLOcalDate(LocalDate date, boolean sql) {
+        DateTimeFormatter FOMATTER;
+        if (sql) {
+            FOMATTER = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        } else {
+            FOMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        }
+
+        return FOMATTER.format(date);
+    }
+
+    public String getDateOfBirthString() {
+        return stringToLOcalDate(this.getDateOfBirth(), true);
+    }
+
     @Override
     public String toString() {
-        return "Person{" + "id=" + id + ", name=" + name + ", lastName=" + lastName + ", document=" + document + ", age=" + age + ", dateOfBirth=" + dateOfBirth + '}';
+        return "Person{" + "id=" + id + ", name=" + name + ", lastName=" + lastName + ", document= " + document + ", age=" + age + ", dateOfBirth=" + stringToLOcalDate(this.dateOfBirth,false) + '}';
     }
 
 }

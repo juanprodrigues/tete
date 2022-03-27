@@ -33,7 +33,7 @@ public class pruebaHerencia {
 
     protected int age;
 
-    protected TypeDocument enumDocument;
+    protected String enumDocument;
 
      protected LocalDate dateOfBirth;
     

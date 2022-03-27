@@ -10,22 +10,22 @@ package actividadmod1.model;
  * @author JuanPC
  */
 public final class Document {
-    private Enum type;
+    private String type;
     private Long number;
 
     public Document() {
     }
 
-    public Document(Enum type, Long number) {
+    public Document(String type, Long number) {
         this.type = type;
         this.number = number;
     }
 
-    public Enum getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Enum type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -41,7 +41,7 @@ public final class Document {
 
     @Override
     public String toString() {
-        return "Document{" + "type=" + type + ", number=" + number + '}';
+        return "Document{"+ type + ", number=" + number + '}';
     }
 
 

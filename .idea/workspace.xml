@@ -2,28 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bf22465-5f98-4ca4-9690-a33130faedce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actividadMod1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/actividadMod1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/ActividadMod1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/ActividadMod1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/Enum/TypeDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/Enum/TypeDocument.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/Service/AdministrativeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/Service/AdministrativeService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/Service/DirectorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/Service/DirectorService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/Service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/Service/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/Service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/Service/PersonService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/Service/StudentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/Service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/Service/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/model/Administrative.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/model/Administrative.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/Service/pruebaHerencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/Service/pruebaHerencia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/Service/pruebaHija.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/Service/pruebaHija.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/model/Director.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/model/Director.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/model/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/model/Document.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/model/Employee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/model/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/model/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/model/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/model/Teacher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/actividadmod1/util/Validation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/actividadmod1/util/Validation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/README.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/actividadMod1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/ActividadMod1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/ActividadMod1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Enum/TypeDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Enum/TypeDocument.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/AdministrativeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/AdministrativeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/DirectorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/DirectorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/EmployeeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/pruebaHerencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/pruebaHerencia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/pruebaHija.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/Service/pruebaHija.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Director.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Director.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Document.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/model/Teacher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/util/Validation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/actividadMod1/actividadmod1/util/Validation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actividadmod1/ActividadMod1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/ActividadMod1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actividadmod1/Enum/TypeDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/Enum/TypeDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actividadmod1/Service/AdministrativeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/Service/AdministrativeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actividadmod1/Service/DirectorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/Service/DirectorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actividadmod1/Service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/Service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actividadmod1/Service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/Service/PersonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actividadmod1/Service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/Service/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actividadmod1/Service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/Service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actividadmod1/Service/pruebaHerencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/Service/pruebaHerencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actividadmod1/model/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/model/Director.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actividadmod1/model/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/model/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actividadmod1/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actividadmod1/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actividadmod1/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actividadmod1/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/model/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actividadmod1/util/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actividadmod1/util/Validation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +75,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../javamysql/mysql-connector-java-5.1.48.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
@@ -76,5 +111,12 @@
       <updated>1647469686786</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

@@ -6,6 +6,7 @@
 package actividadmod1.model;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -14,27 +15,27 @@ import java.util.List;
  */
 public class Teacher extends Employee {
 
-    private List<String> listCourses;
+    private HashMap<Integer, String> listCourses;
 
     public Teacher() {
     }
 
-    public Teacher(List<String> listCourses, LocalDate datePosition, Double sueldo, String name, String lastName, Document document, LocalDate dateOfBirth) {
+    public Teacher(HashMap<Integer, String> listCourses, LocalDate datePosition, Double sueldo, String name, String lastName, Document document, LocalDate dateOfBirth) {
         super(datePosition, sueldo, name, lastName, document, dateOfBirth);
         this.listCourses = listCourses;
     }
 
-    public List<String> getListCourses() {
+    public HashMap<Integer, String> getListCourses() {
         return listCourses;
     }
 
-    public void setListCourses(List<String> listCourses) {
+    public void setListCourses(HashMap<Integer, String> listCourses) {
         this.listCourses = listCourses;
     }
 
     @Override
     public String toString() {
-        return "Teacher{" + "listCourses=" + listCourses + '}' + super.toString();
+        return "Teacher{" + "listCourses=" + listCourses + '}' + " " + super.toString();
     }
 
 }

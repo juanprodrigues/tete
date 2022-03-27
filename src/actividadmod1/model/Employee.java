@@ -6,9 +6,9 @@
 package actividadmod1.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 /**
- *
  * @author JuanPC
  */
 public class Employee extends Person {
@@ -18,6 +18,11 @@ public class Employee extends Person {
     private Double sueldo;
 
     public Employee() {
+    }
+
+    public Employee(LocalDate datePosition, String name, String lastName, Document document, LocalDate dateOfBirth) {
+        super(name, lastName, document, dateOfBirth);
+        this.datePosition = datePosition;
     }
 
     public Employee(LocalDate datePosition, Double sueldo, String name, String lastName, Document document, LocalDate dateOfBirth) {
@@ -42,9 +47,18 @@ public class Employee extends Person {
         this.sueldo = sueldo;
     }
 
+    public String getDatePositionString() {
+        return stringToLOcalDate(this.datePosition, true);
+    }
+
     @Override
     public String toString() {
-        return "Employee{" + "datePosition=" + datePosition + ", sueldo=" + sueldo + '}' + super.toString();
+        return "Employee{" + "datePosition=" + stringToLOcalDate(this.datePosition, false) + ", sueldo=" + sueldo + '}' + super.toString();
+    }
+
+
+    public String toStringStudent() {
+        return "Employee{" + "dateIngreso=" + stringToLOcalDate(this.datePosition, false) + '}' + " " + super.toString();
     }
 
 }
